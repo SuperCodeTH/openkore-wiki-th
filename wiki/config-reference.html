@@ -1,0 +1,606 @@
+﻿<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Config Reference · OpenKore Wiki ภาษาไทย</title><link rel="stylesheet" href="style.css"></head><body><div class="layout"><aside class="sidebar"><a class="brand" href="../index.html">OpenKore<br><span>Wiki ภาษาไทย</span></a><nav><a href="../index.html">หน้าหลัก</a><a href="install.html">การติดตั้ง</a><a class="active" href="config-reference.html">Config Reference</a><a href="items-control.html">items_control.txt</a><a href="storage-auto.html">ฝากคลังอัตโนมัติ</a></nav></aside><main class="content"><div class="crumb">OpenKore Wiki / Config Reference</div><h1>Config Reference ภาษาไทย</h1><p class="lead">สารบัญคีย์ทั้งหมดจาก <code>control/config.txt</code> ของ OpenKore master</p><div class="notice">ค่าใน Template เป็นค่าจากไฟล์ต้นฉบับ ไม่ใช่คำแนะนำให้ใช้เหมือนกันทุกเซิร์ฟเวอร์ และห้ามเผยแพร่รหัสผ่านจริง</div><p>พบทั้งหมด <strong>605 คีย์/รายการ</strong> ใช้ Ctrl+F เพื่อค้นหา</p><div class="table-scroll"><table><thead><tr><th>คีย์</th><th>หมวด</th><th>หน้าที่โดยสรุป</th><th>ชนิดค่า</th><th>Template</th></tr></thead><tbody><tr><td><code>debug</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>debugAssertOnNetwork</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>debugPacket_unparsed</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>debugPacket_received</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>debugPacket_ro_received</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>debugPacket_ro_sent</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>debugPacket_sent</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>debugPacket_exclude</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>debugPacket_include</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>debugPacket_include_dumpMethod</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>debugDomains</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>eventMacro_orphans</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ข้อความหรือรายการ</td><td><code>terminate</code></td></tr>
+<tr><td><code>eventMacro_CheckOnAI</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ข้อความหรือรายการ</td><td><code>auto</code></td></tr>
+<tr><td><code>eventMacro_notWhenInQueue</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ข้อความหรือรายการ</td><td><code>storageAuto, buyAuto, sellAuto</code></td></tr>
+<tr><td><code>eventMacro_file</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ข้อความหรือรายการ</td><td><code>eventMacros.txt</code></td></tr>
+<tr><td><code>avoidObstacles_enable_move</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>avoidObstacles_enable_remove</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>avoidObstacles_enable_avoid_portals</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>avoidObstacles_adjust_route_step</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>avoidObstacles_weight_limit</code></td><td>Debug และ Plugins</td><td>ตัวเลือกสำหรับตรวจสอบระบบหรือ Plugins</td><td>ตัวเลข</td><td><code>65000</code></td></tr>
+<tr><td><code>mercenary_attackAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>mercenary_attackAuto_routeToLock</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackAuto_outOfLock</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackAuto_party</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackAuto_notInTown</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackAuto_notWhile_storageAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackAuto_notWhile_buyAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackAuto_notWhile_sellAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackAuto_considerDamagedAggressive</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackAuto_considerAggressiveIfCastOnCastSensor</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackAuto_onlyWhenSafe</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackAuto_duringRandomWalk</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackAuto_duringItemsTake</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackMaxDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackDistanceAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackMaxRouteTime</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>4</code></td></tr>
+<tr><td><code>mercenary_attackCanSnipe</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackCheckLOS</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackRouteMaxPathDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>20</code></td></tr>
+<tr><td><code>mercenary_attackUseWeapon</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackNoGiveup</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackChangeTarget</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attack_dance_melee</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attack_dance_ranged</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackBeyondMaxDistance_waitForAgressive</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_attackBeyondMaxDistance_sendAttackWhileWaiting</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackSendAttackWithMove</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_attackWaitApproachFinish</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_route_rescueWhenLost</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_route_stopDuringAttack</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_route_waitMinDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>mercenary_runFromTarget</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_runFromTarget_inAdvance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_runFromTarget_dist</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>5</code></td></tr>
+<tr><td><code>mercenary_runFromTarget_minStep</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>7</code></td></tr>
+<tr><td><code>mercenary_runFromTarget_maxPathDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>20</code></td></tr>
+<tr><td><code>mercenary_runFromTarget_noAttackMethodFallback</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_runFromTarget_noAttackMethodFallback_attackMaxDist</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>14</code></td></tr>
+<tr><td><code>mercenary_runFromTarget_noAttackMethodFallback_minStep</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>8</code></td></tr>
+<tr><td><code>mercenary_idleWalkType</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_followMode</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_followDistanceMin</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>mercenary_followDistanceMax</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>mercenary_moveNearWhenIdle</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_moveNearWhenIdle_minDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>mercenary_moveNearWhenIdle_maxDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>8</code></td></tr>
+<tr><td><code>mercenary_route_step</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>mercenary_tankMode</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_tankModeTarget</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_hp</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_maxDmg</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>500</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_maxDmgInLock</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_deadly</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_unstuck</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_dropTarget</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_dropTargetEngaged</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_dropTargetKS</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_totalDmg</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_totalDmgInLock</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>mercenary_teleportAuto_attackedWhenSitting</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>homunculus_attackAuto_routeToLock</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackAuto_outOfLock</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackAuto_party</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackAuto_notInTown</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackAuto_notWhile_storageAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackAuto_notWhile_buyAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackAuto_notWhile_sellAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackAuto_considerDamagedAggressive</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackAuto_considerAggressiveIfCastOnCastSensor</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackAuto_onlyWhenSafe</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackAuto_duringRandomWalk</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackAuto_duringItemsTake</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackMaxDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackDistanceAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackMaxRouteTime</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>4</code></td></tr>
+<tr><td><code>homunculus_attackCanSnipe</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackCheckLOS</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackRouteMaxPathDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>20</code></td></tr>
+<tr><td><code>homunculus_attackUseWeapon</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackNoGiveup</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackChangeTarget</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attack_dance_melee</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackBeyondMaxDistance_waitForAgressive</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_attackBeyondMaxDistance_sendAttackWhileWaiting</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackSendAttackWithMove</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_attackWaitApproachFinish</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_route_rescueWhenLost</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_route_stopDuringAttack</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_route_waitMinDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_runFromTarget</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_runFromTarget_dist</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>5</code></td></tr>
+<tr><td><code>homunculus_runFromTarget_minStep</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>7</code></td></tr>
+<tr><td><code>homunculus_runFromTarget_maxPathDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>20</code></td></tr>
+<tr><td><code>homunculus_runFromTarget_noAttackMethodFallback</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_runFromTarget_noAttackMethodFallback_attackMaxDist</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>14</code></td></tr>
+<tr><td><code>homunculus_runFromTarget_noAttackMethodFallback_minStep</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>8</code></td></tr>
+<tr><td><code>homunculus_idleWalkType</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_followMode</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_followDistanceMin</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>homunculus_followDistanceMax</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>homunculus_moveNearWhenIdle</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_moveNearWhenIdle_minDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>homunculus_moveNearWhenIdle_maxDistance</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>8</code></td></tr>
+<tr><td><code>homunculus_route_step</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>homunculus_tankMode</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_tankModeTarget</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>homunculus_StandByAuto</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_hp</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_maxDmg</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>500</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_maxDmgInLock</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_deadly</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_unstuck</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_dropTarget</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_dropTargetEngaged</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_dropTargetKS</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_totalDmg</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_totalDmgInLock</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_teleportAuto_attackedWhenSitting</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>homunculus_autoFeed</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>homunculus_hunger</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>15</code></td></tr>
+<tr><td><code>homunculus_return</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>11</code></td></tr>
+<tr><td><code>homunculus_autoFeedAllowedMaps</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>pet_autoFeed</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>pet_hunger</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>25</code></td></tr>
+<tr><td><code>pet_return</code></td><td>Homunculus Mercenary และ Pet</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>20</code></td></tr>
+<tr><td><code>teleportAuto_hp</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>teleportAuto_sp</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_idle</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_portal</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_search</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_minAggressives</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_minAggressivesInLock</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_onlyWhenSafe</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_maxDmg</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>500</code></td></tr>
+<tr><td><code>teleportAuto_maxDmgInLock</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_deadly</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>teleportAuto_useSkill</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>teleportAuto_useChatCommand</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>teleportAuto_allPlayers</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_notPlayers</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>teleportAuto_atkCount</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_atkMiss</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>teleportAuto_unstuck</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_lostTarget</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_dropTarget</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_dropTargetEngaged</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>teleportAuto_dropTargetKS</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_dropTargetHidden</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_attackedWhenSitting</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_totalDmg</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_totalDmgInLock</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>teleportAuto_equip_leftAccessory</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>teleportAuto_equip_rightAccessory</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>teleportAuto_lostHomunculus</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>teleportAuto_useItemForRespawn</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>teleportAuto_item1</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>teleportAuto_item2</code></td><td>Teleport และความปลอดภัย</td><td>กำหนดเงื่อนไขและวิธีใช้ Teleport</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>clientSight</code></td><td>แผนที่และเส้นทาง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>17</code></td></tr>
+<tr><td><code>lockMap</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>lockMap_x</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>lockMap_y</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>lockMap_randX</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>lockMap_randY</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>route_escape_reachedNoPortal</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>route_escape_randomWalk</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>route_escape_shout</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>route_randomWalk</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>route_randomWalk_inLockOnly</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>route_randomWalk_inTown</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>route_randomWalk_maxRouteTime</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>75</code></td></tr>
+<tr><td><code>route_maxWarpFee</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>route_maxNpcTries</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>5</code></td></tr>
+<tr><td><code>route_teleport</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>route_teleport_minDistance</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>75</code></td></tr>
+<tr><td><code>route_teleport_maxTries</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>8</code></td></tr>
+<tr><td><code>route_teleport_notInMaps</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>route_warpByItem</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>route_warpByItem_chaining</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>route_warpByItem_minDistance</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>150</code></td></tr>
+<tr><td><code>route_warpItem_minGain</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>route_warpItem_routeCostHeuristic_max</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>10000</code></td></tr>
+<tr><td><code>route_warpItem_routeCostProbe_maxPerTick</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>6</code></td></tr>
+<tr><td><code>route_warpItem_routeCostCache_max</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>3000</code></td></tr>
+<tr><td><code>route_step</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>route_removeMissingPortals_NPC</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>route_removeMissingPortals</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>route_tryToGuessMissingPortalByDistance</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>route_reAddMissingPortals</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>route_avoidWalls</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>route_randomFactor</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>EdenPortalExit</code></td><td>แผนที่และเส้นทาง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>maxUnobstructedWalkPathDistance</code></td><td>แผนที่และเส้นทาง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>17</code></td></tr>
+<tr><td><code>maxObstructedWalkPathDistance</code></td><td>แผนที่และเส้นทาง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>14</code></td></tr>
+<tr><td><code>runFromTarget</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>runFromTarget_inAdvance</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>runFromTarget_dist</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>5</code></td></tr>
+<tr><td><code>runFromTarget_minStep</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>7</code></td></tr>
+<tr><td><code>runFromTarget_maxPathDistance</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>13</code></td></tr>
+<tr><td><code>runFromTarget_noAttackMethodFallback</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>runFromTarget_noAttackMethodFallback_attackMaxDist</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>14</code></td></tr>
+<tr><td><code>runFromTarget_noAttackMethodFallback_minStep</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>8</code></td></tr>
+<tr><td><code>saveMap</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>saveMap_x</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>saveMap_y</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>saveMap_warp</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>saveMap_warpToBuyOrSell</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>saveMap_warp_minDistance</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>saveMap_warpChatCommand</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>memo1</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>memo2</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>memo3</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>memo4</code></td><td>แผนที่และเส้นทาง</td><td>กำหนดการเดินทาง แผนที่ปลอดภัย และการหลบเป้าหมาย</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>itemsTakeAuto</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>itemsTakeAuto_party</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>itemsGatherAuto</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>itemsGatherAuto_notInTown</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>itemsGatherAutoMinPlayerDistance</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>6</code></td></tr>
+<tr><td><code>itemsGatherAutoMinPortalDistance</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>5</code></td></tr>
+<tr><td><code>itemsMaxWeight</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>89</code></td></tr>
+<tr><td><code>itemsMaxWeight_sellOrStore</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>48</code></td></tr>
+<tr><td><code>itemsMaxNum_sellOrStore</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>99</code></td></tr>
+<tr><td><code>cartMaxWeight</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>7900</code></td></tr>
+<tr><td><code>itemsTakeGreed</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>itemsCheckWeight</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>shopAuto_open</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>buyerShopAuto_open</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dealAuto</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>dealAuto_names</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>dealMaxItems</code></td><td>ไอเทม NPC และคลัง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10</code></td></tr>
+<tr><td><code>repairAuto</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>repairAuto_list</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>repairAuto_npc</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>repairAuto_standpoint</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>repairAuto_distance</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>repairAuto_maxDistance</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>repairAuto_npc_steps</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ข้อความหรือรายการ</td><td><code>c r0 c c r0 n</code></td></tr>
+<tr><td><code>repairAuto_useSkill</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>repairAuto_equipAfter</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>repairAuto_warp</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>repairAuto_inTownOnly</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>useSelf_skill_smartHeal</code></td><td>ไอเทม NPC และคลัง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>autoSwitch_default_rightHand</code></td><td>ไอเทม NPC และคลัง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>autoSwitch_default_leftHand</code></td><td>ไอเทม NPC และคลัง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>autoSwitch_default_arrow</code></td><td>ไอเทม NPC และคลัง</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>sellAuto</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>sellAuto_npc</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>sellAuto_standpoint</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>sellAuto_distance</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>sellAuto_maxDistance</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>sellAuto_npc_steps</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ข้อความหรือรายการ</td><td><code>s</code></td></tr>
+<tr><td><code>storageAuto</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>storageAuto_onStart</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>storageAuto_npc</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>storageAuto_standpoint</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>storageAuto_distance</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>storageAuto_maxDistance</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>storageAuto_npc_type</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>storageAuto_type</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>storageAuto_npc_steps</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>storageAuto_password</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>storageAuto_keepOpen</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>storageAuto_useChatCommand</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>storageAuto_useItem</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>storageAuto_useItem_item</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>storageAuto_notAfterDeath</code></td><td>ไอเทม NPC และคลัง</td><td>กำหนดการจัดการไอเทม น้ำหนัก NPC หรือคลัง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>poseidonServer</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>127.0.0.1</code></td></tr>
+<tr><td><code>poseidonPort</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>24390</code></td></tr>
+<tr><td><code>poseidonTimeout</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>5</code></td></tr>
+<tr><td><code>bindIp</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>forceMapIP</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>XKore</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>XKore_port</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>2350</code></td></tr>
+<tr><td><code>XKore_dll</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>NetRedirect.dll</code></td></tr>
+<tr><td><code>XKore_injectDLL</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>XKore_autoAttachIfOneExe</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>XKore_silent</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>XKore_lookForProcess</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>XKore_bypassBotDetection</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>XKore_exeName</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>ragexe.exe</code></td></tr>
+<tr><td><code>XKore_listenIp</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>127.0.0.1</code></td></tr>
+<tr><td><code>XKore_listenPort</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>6901</code></td></tr>
+<tr><td><code>XKore_listenPort_map</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>XKore_listenPort_char</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>XKore_publicIp</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>127.0.0.1</code></td></tr>
+<tr><td><code>XKore_ID</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>secureAdminPassword</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>adminPassword</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>callSign</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>commandPrefix</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>;</code></td></tr>
+<tr><td><code>callSignGM</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>inGameAuth</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>macAddress</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>pauseCharLogin</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>pauseCharServer</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>pauseMapServer</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>ignoreInvalidLogin</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>whenInGame_requestCashPoints</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>message_length_max</code></td><td>การเชื่อมต่อและ XKore</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>80</code></td></tr>
+<tr><td><code>attackAuto</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>attackAuto_routeToLock</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackAuto_outOfLock</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackAuto_party</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackAuto_onlyWhenSafe</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackAuto_followTarget</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackAuto_notInTown</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackAuto_notWhile_storageAuto</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackAuto_notWhile_buyAuto</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackAuto_notWhile_sellAuto</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackAuto_considerDamagedAggressive</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackAuto_considerAggressiveIfCastOnCastSensor</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackAllowStartStorageBuySell</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackDistance</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackDistanceAuto</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackMaxDistance</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackMaxRouteTime</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>4</code></td></tr>
+<tr><td><code>attackMinPlayerDistance</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>attackMinPortalDistance</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>4</code></td></tr>
+<tr><td><code>attackUseWeapon</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackNoGiveup</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackCanSnipe</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackCheckLOS</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackRouteMaxPathDistance</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>20</code></td></tr>
+<tr><td><code>attackLooters</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackLooters_dist</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackChangeTarget</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>aggressiveAntiKS</code></td><td>การต่อสู้และเป้าหมาย</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackUpdateMonsterPos</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attackBeyondMaxDistance_waitForAgressive</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackBeyondMaxDistance_sendAttackWhileWaiting</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackSendAttackWithMove</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>attackWaitApproachFinish</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>autoMoveOnDeath</code></td><td>การต่อสู้และเป้าหมาย</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>autoMoveOnDeath_x</code></td><td>การต่อสู้และเป้าหมาย</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>autoMoveOnDeath_y</code></td><td>การต่อสู้และเป้าหมาย</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>autoMoveOnDeath_map</code></td><td>การต่อสู้และเป้าหมาย</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_topHead</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_midHead</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_lowHead</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_leftHand</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_rightHand</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_leftAccessory</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_rightAccessory</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_robe</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_armor</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_shoes</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>attackEquip_arrow</code></td><td>การต่อสู้และเป้าหมาย</td><td>ควบคุมระยะ วิธี และเงื่อนไขการโจมตี</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>alias_heal</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>sp 28</code></td></tr>
+<tr><td><code>allowedMaps</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>allowedMaps_reaction</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>startTime</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>stopTime</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>minTime</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>varTime</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>lvl</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>joblvl</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>autoMakeArrows</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>autoRestart</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>autoRestartMin</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10800</code></td></tr>
+<tr><td><code>autoRestartSeed</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3600</code></td></tr>
+<tr><td><code>autoRestartSleep</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>autoSleepMin</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>900</code></td></tr>
+<tr><td><code>autoSleepSeed</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>900</code></td></tr>
+<tr><td><code>autoResponse</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>autoResponseOnHeal</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>autoSpell</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>autoSpell_safe</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>autoPoison</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>avoidGM_namePattern</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>avoidGM_near</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>avoidGM_near_inTown</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>avoidGM_talk</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>avoidGM_reconnect</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1800</code></td></tr>
+<tr><td><code>avoidGM_ignoreList</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>avoidList</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>avoidList_inLockOnly</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>avoidList_reconnect</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1800</code></td></tr>
+<tr><td><code>avoidList_ignoreList</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>avoidHiddenActors</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>avoidHiddenMonsters</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>cachePlayerNames</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>cachePlayerNames_duration</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>900</code></td></tr>
+<tr><td><code>cachePlayerNames_maxSize</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>100</code></td></tr>
+<tr><td><code>dcPause</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>dcOnDeath</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnDualLogin</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnDisconnect</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnEmptyArrow</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnMaxReconnections</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnMute</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnPM</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnZeny</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnStorageFull</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>dcOnPlayer</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnServerShutDown</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnServerClose</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnJobLevel</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>dcOnLevel</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>shop_random</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>shop_useSkill</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>buyerShop_random</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>githubURL</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>githubIssueURL</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>manualURL</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>https://openkore.com/wiki/Manual</code></td></tr>
+<tr><td><code>forumURL</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>https://forums.openkore.com</code></td></tr>
+<tr><td><code>autoTalkCont</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>noAutoSkill</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>missDamage</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>tankersList</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>status_mapProperty</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>status_mapType</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>monster_filter</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>lvl</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>dist</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>maxDist</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>maxCastTime</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>minCastTime</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>previousDamage</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>monsters</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>notMonsters</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>maxAttempts</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>maxUses</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>isSelfSkill</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>isStartSkill</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>equip_topHead</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_midHead</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_lowHead</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_leftHand</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_rightHand</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_leftAccessory</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_rightAccessory</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_robe</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_armor</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_shoes</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>equip_arrow</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>afterSkill</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>waitBeforeUse</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>autoCombo</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>smartEncore</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>noSmartHeal</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>partySkillDistance</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>0..8</code></td></tr>
+<tr><td><code>target</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>notPartyOnly</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>rightHand</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>leftHand</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>arrow</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>distance</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>useWeapon</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>topHead</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>midHead</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>lowHead</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>leftAccessory</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>rightAccessory</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>robe</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>armor</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>shoes</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>weight</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>whileSitting</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>dcOnEmpty</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>npc</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>npc_steps</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>b</code></td></tr>
+<tr><td><code>isMarket</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>standpoint</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>distance</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>price</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>minAmount</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>maxAmount</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>batchSize</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>onlyIdentified</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>zeny</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>minDistance</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>maxDistance</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>dcOnEmpty</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>rodexMaxItems</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>5</code></td></tr>
+<tr><td><code>relogAfterStorage</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>minStorageZeny</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>50</code></td></tr>
+<tr><td><code>npcWrongStepsMethod</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>passive</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>history_max</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>50</code></td></tr>
+<tr><td><code>enabled</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>penalty_dist</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>1000, 1000, 1000, 20</code></td></tr>
+<tr><td><code>danger_dist</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ข้อความหรือรายการ</td><td><code>10, 10, 10, 1</code></td></tr>
+<tr><td><code>prohibited_dist</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>drop_target_when_near_dist</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>drop_destination_when_near_dist</code></td><td>การตั้งค่าอื่น ๆ</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>follow</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>followTarget</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>followEmotion</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>followEmotion_distance</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>4</code></td></tr>
+<tr><td><code>followFaceDirection</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>followDistanceMax</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>6</code></td></tr>
+<tr><td><code>followDistanceMin</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>3</code></td></tr>
+<tr><td><code>followLostStep</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>12</code></td></tr>
+<tr><td><code>followSitAuto</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>followBot</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>sitAuto_hp_lower</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ตัวเลข</td><td><code>40</code></td></tr>
+<tr><td><code>sitAuto_hp_upper</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ตัวเลข</td><td><code>100</code></td></tr>
+<tr><td><code>sitAuto_sp_lower</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>sitAuto_sp_upper</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>sitAuto_follow</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>sitAuto_over_50</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>sitAuto_idle</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>sitAuto_look</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>sitAuto_look_from_wall</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>sitAuto_look_delay</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดเงื่อนไขนั่งพักตาม HP/SP หรือสถานะ</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>sitTensionRelax</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>statsAddAuto</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>เปิดการเพิ่มค่าสถานะหรือสกิลอัตโนมัติ</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>statsAddAuto_list</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>เปิดการเพิ่มค่าสถานะหรือสกิลอัตโนมัติ</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>statsAddAuto_dontUseBonus</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>เปิดการเพิ่มค่าสถานะหรือสกิลอัตโนมัติ</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>statsAdd_over_99</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>เปิดการเพิ่มค่าสถานะหรือสกิลอัตโนมัติ</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>skillsAddAuto</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>เปิดการเพิ่มค่าสถานะหรือสกิลอัตโนมัติ</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>skillsAddAuto_list</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>เปิดการเพิ่มค่าสถานะหรือสกิลอัตโนมัติ</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>tankMode</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>tankModeTarget</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>partyAuto</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>partyAutoShare</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>partyAutoShareItem</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>partyAutoShareItemDiv</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>guildAutoDeny</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>กำหนดพฤติกรรมร่วมกับผู้เล่นหรือปาร์ตี้</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>attendanceAuto</code></td><td>ตัวละคร ปาร์ตี้ และผู้ช่วย</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>master</code></td><td>บัญชีและเซิร์ฟเวอร์</td><td>ข้อมูลเลือกเซิร์ฟเวอร์และตัวละคร</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>server</code></td><td>บัญชีและเซิร์ฟเวอร์</td><td>ข้อมูลเลือกเซิร์ฟเวอร์และตัวละคร</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>username</code></td><td>บัญชีและเซิร์ฟเวอร์</td><td>ข้อมูลเลือกเซิร์ฟเวอร์และตัวละคร</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>password</code></td><td>บัญชีและเซิร์ฟเวอร์</td><td>ข้อมูลเลือกเซิร์ฟเวอร์และตัวละคร</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>loginPinCode</code></td><td>บัญชีและเซิร์ฟเวอร์</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>char</code></td><td>บัญชีและเซิร์ฟเวอร์</td><td>ข้อมูลเลือกเซิร์ฟเวอร์และตัวละคร</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>otpSeed</code></td><td>บัญชีและเซิร์ฟเวอร์</td><td>ข้อมูลเลือกเซิร์ฟเวอร์และตัวละคร</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>verbose</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>showDomain</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>showDomain_NPC</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ข้อความหรือรายการ</td><td><code>parseMsg_presence</code></td></tr>
+<tr><td><code>showDomain_Shop</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ข้อความหรือรายการ</td><td><code>list</code></td></tr>
+<tr><td><code>squelchDomains</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>verboseDomains</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>beepDomains</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>beepDomains_notInTown</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>friendlyAID</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>showTime</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>showTimeDomains</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>showTimeDomainsFormat</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>wx_map_maxAutoSize</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>300</code></td></tr>
+<tr><td><code>wx_map_monsterSticking</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>wx_map_npcSticking</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>wx_map_playersSticking</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>wx_map_portalSticking</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>5</code></td></tr>
+<tr><td><code>wx_map_route</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>wx_map_namesDetail</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>8</code></td></tr>
+<tr><td><code>wx_map_playerNameZoom</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>8</code></td></tr>
+<tr><td><code>wx_map_partyNameZoom</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>wx_map_portalDestinations</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>wx_npcTalk</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>wx_captcha</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>showAllDamage</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>logChat</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logPrivateChat</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logPartyChat</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logGuildChat</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logClanChat</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>logSystemChat</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logLocalBroadcast</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logShop</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logEmoticons</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>logConsole</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logAppendUsername</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>logAppendServer</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>monsterLog</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>playerLog</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>logDead</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>questDisplayStyle</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>chatTitleOversize</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>shopTitleOversize</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>buyerShopTitleOversize</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>sleepTime</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>10000</code></td></tr>
+<tr><td><code>ignoreAll</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>itemHistory</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>0</code></td></tr>
+<tr><td><code>portalCompile</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>portalRecord</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>2</code></td></tr>
+<tr><td><code>portalRecord_recompileAfter</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>portalUpdatePosition</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ตัวเลข</td><td><code>1</code></td></tr>
+<tr><td><code>npcTimeResponse</code></td><td>หน้าจอ Log และ Wx</td><td>คีย์ย่อยของหมวดที่เกี่ยวข้อง</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>logToFile_Debug</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>logToFile_Errors</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>logToFile_Messages</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+<tr><td><code>logToFile_Warnings</code></td><td>หน้าจอ Log และ Wx</td><td>ควบคุมการแสดงผล หน้าต่าง และ Log</td><td>ค่าเปล่า/ข้อความ</td><td><code>(ว่าง)</code></td></tr>
+</tbody></table></div><h2>แหล่งอ้างอิง</h2><p><a href="../config-reference.md">เปิดไฟล์ Markdown ใน Repository</a> · <a href="https://github.com/OpenKore/openkore/blob/master/control/config.txt">config.txt ฉบับต้นฉบับ</a> · <a href="https://openkore.com/wiki/Category:Config.txt">หมวด Config บน OpenKore Wiki</a></p><footer><a href="../index.html">← กลับหน้าหลัก</a></footer></main></div></body></html>
