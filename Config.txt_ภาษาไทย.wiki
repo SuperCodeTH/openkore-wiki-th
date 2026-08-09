@@ -1,0 +1,51 @@
+= config.txt =
+
+`config.txt` เป็นไฟล์ตั้งค่าหลักของ OpenKore ค่าหนึ่งบรรทัดใช้รูปแบบ `ชื่อคีย์ ค่า` และบรรทัดที่ขึ้นต้นด้วย `#` คือหมายเหตุ
+
+== ตัวอย่างพื้นฐาน ==
+
+<syntaxhighlight lang="text">
+attackAuto 2
+itemsTakeAuto 2
+itemsMaxWeight 89
+itemsMaxWeight_sellOrStore 70
+storageAuto 1
+</syntaxhighlight>
+
+== คีย์ที่ใช้บ่อย ==
+
+{| class="wikitable"
+! คีย์ !! ความหมาย
+|-
+| `attackAuto` || เปิดหรือปิดการโจมตีอัตโนมัติ โดยทั่วไป `0` ปิด และ `2` ทำงานอัตโนมัติ
+|-
+| `itemsTakeAuto` || การเก็บไอเทมบนพื้น
+|-
+| `itemsMaxWeight` || น้ำหนักสูงสุดที่อนุญาตก่อนเริ่มจัดการไอเทม
+|-
+| `itemsMaxWeight_sellOrStore` || เปอร์เซ็นต์น้ำหนักที่ใช้เป็นเงื่อนไขกลับไปขายหรือฝากคลัง
+|-
+| `storageAuto` || เปิดฝากของเข้าคลังอัตโนมัติ (`0` หรือ `1`)
+|-
+| `storageAuto_npc` || พิกัด NPC คลังในรูปแบบ `แผนที่ x y`
+|-
+| `storageAuto_distance` || ระยะที่ต้องยืนจาก NPC
+|-
+| `storageAuto_npc_type` || รูปแบบบทสนทนา NPC คลัง
+|-
+| `storageAuto_npc_steps` || ลำดับการเลือกเมนูสำหรับ NPC แบบกำหนดเอง
+|-
+| `storageAuto_password` || รหัสคลัง หากเซิร์ฟเวอร์ร้องขอ
+|-
+| `relogAfterStorage` || เชื่อมต่อใหม่หลังฝากคลัง หากตั้งเป็น `1`
+|}
+
+== การแก้ไขค่า ==
+
+ปิด OpenKore ก่อนแก้ไฟล์เพื่อป้องกันค่าที่อยู่ในหน่วยความจำเขียนทับไฟล์ จากนั้นบันทึกเป็น UTF-8 และเปิดโปรแกรมใหม่
+
+ค่าบางอย่างขึ้นกับเซิร์ฟเวอร์โดยตรง โดยเฉพาะ `server`, `serverType`, รูปแบบการคุยกับ NPC และคำสั่งเปิดคลัง
+
+== แหล่งข้อมูล ==
+
+* [https://github.com/OpenKore/openkore/blob/master/control/config.txt config.txt ฉบับต้นฉบับ]

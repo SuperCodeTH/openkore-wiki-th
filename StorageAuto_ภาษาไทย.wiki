@@ -1,0 +1,48 @@
+= ฝากของเข้าคลังอัตโนมัติ =
+
+การฝากคลังต้องตั้งค่าทั้ง `config.txt` และ `items_control.txt`
+
+== ตัวอย่าง NPC แบบมาตรฐาน ==
+
+<syntaxhighlight lang="text">
+storageAuto 1
+storageAuto_npc prontera 150 187
+storageAuto_distance 5
+storageAuto_npc_type 1
+storageAuto_npc_steps
+itemsMaxWeight_sellOrStore 70
+minStorageZeny 50
+</syntaxhighlight>
+
+เปลี่ยน `prontera 150 187` เป็นแผนที่และพิกัด NPC คลังจริงของเซิร์ฟเวอร์คุณ
+
+== NPC แบบกำหนดเอง ==
+
+หากบทสนทนาไม่ใช่รูปแบบมาตรฐาน ให้ใช้ชนิด `3` แล้วระบุขั้นตอนเอง เช่น:
+
+<syntaxhighlight lang="text">
+storageAuto_npc_type 3
+storageAuto_npc_steps c r1 c r0 n
+</syntaxhighlight>
+
+ลำดับ `r1`, `r0` และตัวเลือกอื่นต้องตรวจจากเมนู NPC ของเซิร์ฟเวอร์นั้น ไม่ควรคัดลอกตัวอย่างโดยไม่ทดสอบ
+
+== เริ่มฝากเมื่อใด ==
+
+โดยทั่วไป OpenKore จะเริ่มกระบวนการเมื่อมีไอเทมที่ถูกกำหนด `storage 1` และจำนวนเกินค่า `keep` หรือเมื่อน้ำหนักถึงเงื่อนไข `itemsMaxWeight_sellOrStore`
+
+== ถ้าไม่ทำงาน ==
+
+# ตรวจว่า `storageAuto 1` ไม่ได้ถูกซ้ำด้วยค่า `0` ในไฟล์อื่น
+# ตรวจแผนที่และพิกัด NPC
+# ตรวจว่า `items_control.txt` มี `all 0 1 0` หรือมีรายการไอเทมที่ตั้ง `1`
+# ตรวจว่ามี Zeny อย่างน้อยตาม `minStorageZeny`
+# ถ้าเปิดคลังได้แต่เลือกเมนูผิด ให้เปลี่ยน `storageAuto_npc_type` เป็น `3` และบันทึก `storageAuto_npc_steps` ใหม่
+# ทดสอบด้วยคำสั่งฝากคลังแบบ manual ก่อน แล้วดูข้อความตอบกลับจาก NPC
+
+เซิร์ฟเวอร์ที่มีคำสั่งแชตเปิดคลังอาจใช้ `storageAuto_useChatCommand` แทน NPC แต่ต้องใช้คำสั่งที่เซิร์ฟเวอร์รองรับ
+
+== แหล่งข้อมูล ==
+
+* [https://openkore.com/wiki/StorageAuto StorageAuto ฉบับต้นฉบับ]
+* [https://openkore.com/wiki/StorageAuto_npc_type storageAuto_npc_type ฉบับต้นฉบับ]

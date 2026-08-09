@@ -1,0 +1,8 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ฝากคลังอัตโนมัติ · OpenKore Wiki ภาษาไทย</title><link rel="stylesheet" href="style.css"></head><body><div class="layout"><aside class="sidebar"><a class="brand" href="../index.html">OpenKore<br><span>Wiki ภาษาไทย</span></a><nav><a href="../index.html">หน้าหลัก</a><a href="install.html">การติดตั้ง</a><a href="config.html">config.txt</a><a href="items-control.html">items_control.txt</a><a class="active" href="storage-auto.html">ฝากคลังอัตโนมัติ</a></nav></aside><main class="content"><div class="crumb">OpenKore Wiki / ฝากคลังอัตโนมัติ</div><h1>ฝากของเข้าคลังอัตโนมัติ</h1><p class="lead">ตั้งค่าร่วมกันระหว่าง <code>config.txt</code> และ <code>items_control.txt</code></p><h2>ตัวอย่าง NPC มาตรฐาน</h2><pre>storageAuto 1
+storageAuto_npc prontera 150 187
+storageAuto_distance 5
+storageAuto_npc_type 1
+storageAuto_npc_steps
+itemsMaxWeight_sellOrStore 70
+minStorageZeny 50</pre><p>เปลี่ยน <code>prontera 150 187</code> เป็นแผนที่และพิกัด NPC คลังจริงของเซิร์ฟเวอร์</p><h2>NPC แบบกำหนดเอง</h2><pre>storageAuto_npc_type 3
+storageAuto_npc_steps c r1 c r0 n</pre><p>ลำดับเมนูต้องตรวจจาก NPC ของเซิร์ฟเวอร์นั้น ไม่ควรคัดลอกตัวอย่างโดยไม่ทดสอบ</p><h2>ถ้าไม่ทำงาน</h2><ol><li>ตรวจว่า <code>storageAuto 1</code></li><li>ตรวจแผนที่และพิกัด NPC</li><li>ตรวจ <code>items_control.txt</code> ว่ามี <code>all 0 1 0</code> หรือรายการที่ตั้งฝากคลังเป็น <code>1</code></li><li>ตรวจว่ามี Zeny ตามค่า <code>minStorageZeny</code></li><li>ถ้าเลือกเมนูผิด ให้ใช้ชนิด <code>3</code> และบันทึกลำดับเมนูใหม่</li></ol><footer><a href="../index.html">← กลับหน้าหลัก</a></footer></main></div></body></html>
